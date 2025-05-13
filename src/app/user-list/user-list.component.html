@@ -1,0 +1,8 @@
+<h3>Memoized API with Params</h3>
+<button (click)="loadUsers(1)">Load Page 1</button>
+<button (click)="loadUsers(2)">Load Page 2</button>
+<button (click)="loadUsers(1)">Load Page 1 Again (From Cache)</button>
+
+<ul *ngIf="users.length">
+  <li *ngFor="let user of users">{{ user.name }}</li>
+</ul>
